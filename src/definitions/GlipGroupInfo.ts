@@ -8,7 +8,8 @@ interface GlipGroupInfo {
 	id?: string;
 
 	/**
-	 * Type of a group. 'PrivateChat' is a group of 2 members. 'Group' is a chat of 2 and more participants, the membership cannot be changed after group creation. 'Team' is a chat of 1 and more participants, the membership can be modified in future
+	 * Type of a group. 'PrivateChat' is a group of 2 members. 'Group' is a chat of 2 and more participants, the membership cannot be changed after group creation. 
+	 * 'Team' is a chat of 1 and more participants, the membership can be modified in future
 	 */
 	type?: 'PrivateChat' | 'Group' | 'Team';
 

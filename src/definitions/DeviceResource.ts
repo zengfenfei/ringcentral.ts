@@ -18,7 +18,8 @@ interface DeviceResource {
 	uri?: string;
 
 	/**
-	 * Device identification number (stock keeping unit) in the format TP-ID [-AT-AC], where TP is device type (HP for RC HardPhone, DV for all other devices including softphone); ID - device model ID; AT -addon type ID; AC - addon count (if any). For example 'HP-56-2-2'
+	 * Device identification number (stock keeping unit) in the format TP-ID [-AT-AC], where TP is device type (HP for RC HardPhone, DV for all other devices including softphone); 
+	 * ID - device model ID; AT -addon type ID; AC - addon count (if any). For example 'HP-56-2-2'
 	 */
 	sku?: string;
 
@@ -73,12 +74,14 @@ interface DeviceResource {
 	shipping?: ShippingResource;
 
 	/**
-	 * Box billing identifier of a device. Applicable only for HardPhones. It is an alternative way to identify the device to be ordered. Either model structure, or boxBillingId must be specified for HardPhone
+	 * Box billing identifier of a device. Applicable only for HardPhones. It is an alternative way to identify the device to be ordered. 
+	 * Either model structure, or boxBillingId must be specified for HardPhone
 	 */
 	boxBillingId?: number;
 
 	/**
-	 * Pooling type of a deviceHost - device with standalone paid phone line which can be linked to Glip/Softphone instanceGuest - device with a linked phone lineNone - device without a phone line or with specific line (free, BLA, etc.) = ['Host', 'Guest', 'None']
+	 * Pooling type of a deviceHost - device with standalone paid phone line which can be linked to Glip/Softphone instanceGuest - 
+	 * device with a linked phone lineNone - device without a phone line or with specific line (free, BLA, etc.) = ['Host', 'Guest', 'None']
 	 */
 	linePooling?: 'Host' | 'Guest' | 'None';
 }

@@ -12,7 +12,8 @@ export default class Glip extends PathSegment {
 	}
 
 /**
-	 * Internal identifier of an RC account/Glip company, or tilde (~) to indicate a company the current user belongs to
+	 * Internal identifier of an RC account/Glip company, 
+	 * or tilde (~) to indicate a company the current user belongs to
 	 */	companies(id?: string) {
 		return new Companies(this, id);
 	}

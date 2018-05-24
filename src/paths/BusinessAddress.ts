@@ -10,7 +10,10 @@ export default class BusinessAddress extends PathSegment {
 	}
 
 	/**
-	 *  <p style='font-style:italic;'></p><p></p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>ReadAccounts</td><td>Viewing user account info (including name, business name, address and phone number/account number)</td></tr></tbody></table><h4>Usage Plan Group</h4><p>Light</p>
+	 * Return company address (as listed under Company Info in service web)
+	 * 
+	 * Permission: ReadAccounts
+	 * Usage Plan Group: Light
 	 */
 	get(): Promise<GetAccountInfoResponse> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {
@@ -23,7 +26,10 @@ export default class BusinessAddress extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'></p><p></p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>EditAccounts</td><td>Viewing and updating user account info (including name, business name, address and phone number/account number)</td></tr><tr><td class='code'>ReadAccounts</td><td>Viewing user account info (including name, business name, address and phone number/account number)</td></tr></tbody></table><h4>Usage Plan Group</h4><p>Medium</p>
+	 * Modify company address
+	 * 
+	 * Permission: EditAccounts, ReadAccounts
+	 * Usage Plan Group: Medium
 	 */
 	put(body: ModifyAccountBusinessAddressRequest): Promise<AccountBusinessAddressResource> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {

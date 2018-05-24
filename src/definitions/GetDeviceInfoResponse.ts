@@ -18,7 +18,8 @@ interface GetDeviceInfoResponse {
 	uri?: string;
 
 	/**
-	 * Device identification number (stock keeping unit) in the format TP-ID [-AT-AC], where TP is device type (HP for RC HardPhone, DV for all other devices including softphone); ID - device model ID; AT -addon type ID; AC - addon count (if any). For example 'HP-56-2-2'
+	 * Device identification number (stock keeping unit) in the format TP-ID [-AT-AC], where TP is device type (HP for RC HardPhone, DV for all other devices including softphone); 
+	 * ID - device model ID; AT -addon type ID; AC - addon count (if any). For example 'HP-56-2-2'
 	 */
 	sku?: string;
 
@@ -28,7 +29,8 @@ interface GetDeviceInfoResponse {
 	type?: 'SoftPhone' | 'OtherPhone' | 'HardPhone';
 
 	/**
-	 * Device name. Mandatory if ordering  SoftPhone  or  OtherPhone . Optional for  HardPhone . If not specified for HardPhone, then device model  name is used as device  name
+	 * Device name. Mandatory if ordering  SoftPhone  or  OtherPhone . Optional for  HardPhone. 
+	 * If not specified for HardPhone, then device model  name is used as device  name
 	 */
 	name?: string;
 
@@ -68,7 +70,8 @@ interface GetDeviceInfoResponse {
 	shipping?: ShippingInfo;
 
 	/**
-	 * Box billing identifier of a device. Applicable only for HardPhones. It is an alternative way to identify the device to be ordered. EitherT? model  structure, or  boxBillingId  must be specified forT?HardPhone
+	 * Box billing identifier of a device. Applicable only for HardPhones. It is an alternative way to identify the device to be ordered. 
+	 * EitherT? model  structure, or  boxBillingId  must be specified forT?HardPhone
 	 */
 	boxBillingId?: number;
 }

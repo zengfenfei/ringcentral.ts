@@ -29,7 +29,8 @@ interface FederationAccountInfo {
 	mainNumber?: FederationMainNumberInfo;
 
 	/**
-	 * Count of federation extension numbers conflicting with extension numbers of the requested account. For extension numbers of the requested account the value of this parameter is '0'
+	 * Count of federation extension numbers conflicting with extension numbers of the requested account. 
+	 * For extension numbers of the requested account the value of this parameter is '0'.
 	 */
 	conflictCount?: number;
 }

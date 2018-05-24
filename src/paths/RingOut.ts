@@ -9,7 +9,10 @@ export default class RingOut extends PathSegment {
 	}
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.7 (Release 5.16)</p><p>Makes a 2-leg RingOut call.</p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>RingOut</td><td>Performing two-legged ring-out phone calls</td></tr></tbody></table><h4>Usage Plan Group</h4><p>Heavy</p>
+	 * Makes a 2-leg RingOut call.
+	 * 
+	 * Permission: RingOut
+	 * Usage Plan Group: Heavy
 	 */
 	post(body: MakeRingOutRequest): Promise<GetRingOutStatusResponse> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {
@@ -22,7 +25,10 @@ export default class RingOut extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.7 (Release 5.16)</p><p>Returns the status of a 2-leg RingOut call.</p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>RingOut</td><td>Performing two-legged ring-out phone calls</td></tr></tbody></table><h4>Usage Plan Group</h4><p>Light</p>
+	 * Returns the status of a 2-leg RingOut call.
+	 * 
+	 * Permission: RingOut
+	 * Usage Plan Group: Light
 	 */
 	get(): Promise<GetRingOutStatusResponse> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {
@@ -35,7 +41,10 @@ export default class RingOut extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'></p><p>Cancels the 2-leg RingOut call.</p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>RingOut</td><td>Performing two-legged ring-out phone calls</td></tr></tbody></table><h4>Usage Plan Group</h4><p>Heavy</p>
+	 * Cancels the 2-leg RingOut call.
+	 * 
+	 * Permission: RingOut
+	 * Usage Plan Group: Heavy
 	 */
 	delete(): Promise<void> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {

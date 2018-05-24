@@ -6,7 +6,8 @@ import MakeRingOutCoutryInfo from './MakeRingOutCoutryInfo';
 interface MakeRingOutRequest {
 
 	/**
-	 * Phone number of the caller. This number corresponds to the 1st leg of the RingOut call. This number can be one of user's configured forwarding numbers or arbitrary number
+	 * Phone number of the caller. This number corresponds to the 1st leg of the RingOut call. 
+	 * This number can be one of user's configured forwarding numbers or arbitrary number
 	 */
 	from?: MakeRingOutCallerInfoRequestFrom;
 

@@ -8,7 +8,8 @@ export default class CallLogSync extends PathSegment {
 	}
 
 	/**
-	 *  <p style='font-style:italic;'></p><p></p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>ReadCallLog</td><td>Viewing user call logs</td></tr></tbody></table><h4>Usage Plan Group</h4><p>Heavy</p>
+	 * Permission: ReadCallLog
+	 * Usage Plan Group: Heavy
 	 */
 	list(query?: ListQuery): Promise<ICallLogSync> {
 		return this.getRest().call(this.getEndpoint(false), query, {

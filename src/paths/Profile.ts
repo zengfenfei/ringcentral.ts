@@ -8,7 +8,10 @@ export default class Profile extends PathSegment {
 	}
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.30 (Release 9.1)</p><p>Returns Glip unread message count.</p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>Glip</td><td>Availability of Glip</td></tr></tbody></table><h4>API Group</h4><p>Light</p>
+	 * Returns Glip unread message count.
+	 * 
+	 * Permission: Glip
+	 * API Group: Light
 	 */
 	get(query?: GetQuery): Promise<GlipUnreadMessageCount> {
 		return this.getRest().call(this.getEndpoint(true), query, {
@@ -24,7 +27,9 @@ export default class Profile extends PathSegment {
 export interface GetQuery {
 
 	/**
-	 * List of attributes to be returned. To return unread message count 'unreadPostsCount' and 'tooManyUnreadPosts' should be specified
+	 * List of attributes to be returned. 
+	 * To return unread message count 'unreadPostsCount' and 
+	 * 'tooManyUnreadPosts' should be specified
 	 */
 	fields?: string;
 }

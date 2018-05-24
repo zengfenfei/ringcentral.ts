@@ -8,7 +8,10 @@ export default class Files extends PathSegment {
 	}
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.31 (Release 9.2)</p><p>Posts a file.</p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>Glip</td><td>Availability of Glip</td></tr></tbody></table><h4>API Group</h4><p>Heavy</p>
+	 * Posts a file.
+	 * 
+	 * Permission: Glip
+	 * API Group: Heavy
 	 */
 	post(query?: PostQuery): Promise<PostGlipFile> {
 		return this.getRest().call(this.getEndpoint(true), query, {
@@ -21,7 +24,10 @@ export default class Files extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.31 (Release 9.2)</p><p>Returns a file.</p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>Glip</td><td>Availability of Glip</td></tr></tbody></table><h4>API Group</h4><p>Medium</p>
+	 * Returns a file.
+	 * 
+	 * Permission: Glip
+	 * API Group: Medium
 	 */
 	get(): Promise<PostGlipFile> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {

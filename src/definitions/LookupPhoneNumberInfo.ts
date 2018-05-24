@@ -13,7 +13,8 @@ interface LookupPhoneNumberInfo {
 	formattedNumber?: string;
 
 	/**
-	 * Vanity pattern for this number. Returned only when vanity search option is requested. Vanity pattern corresponds to request parameters nxx plus line or numberPattern
+	 * Vanity pattern for this number. Returned only when vanity search option is requested. 
+	 * Vanity pattern corresponds to request parameters nxx plus line or numberPattern
 	 */
 	vanityPattern?: string;
 

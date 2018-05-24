@@ -15,7 +15,8 @@ interface ScheduleInfo {
 	ranges?: RangesInfo;
 
 	/**
-	 * The user's schedule specified for business hours or after hours; it can also be set/retrieved calling the corresponding method
+	 * The user's schedule specified for business hours or after hours; 
+	 * it can also be set/retrieved calling the corresponding method
 	 */
 	ref?: 'BusinessHours' | 'AfterHours';
 }

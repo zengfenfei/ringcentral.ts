@@ -20,7 +20,8 @@ interface PhoneNumberResource {
 	extension?: ExtensionResource;
 
 	/**
-	 * Custom user name of a phone number, if any. Supported for numbers assigned to Auto-Receptionist, with usage type 'CompanyNumber'
+	 * Custom user name of a phone number, if any. 
+	 * Supported for numbers assigned to Auto-Receptionist, with usage type 'CompanyNumber'
 	 */
 	label?: string;
 
@@ -40,7 +41,8 @@ interface PhoneNumberResource {
 	phoneNumber?: string;
 
 	/**
-	 * Status of a phone number. If the value is 'Normal', the phone number is ready to be used. Otherwise it is an external number not yet ported to RingCentral ,
+	 * Status of a phone number. If the value is 'Normal', the phone number is ready to be used. 
+	 * Otherwise it is an external number not yet ported to RingCentral ,
 	 */
 	status?: string;
 

@@ -9,7 +9,11 @@ export default class Bot extends PathSegment {
 	}
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.32 (Release 9.3)</p><p>Creates a bot extension. Please note: Bot extension is always created in Enabled status, no welcome email is sent.</p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>EditAccounts</td><td>Viewing and updating user account info (including name, business name, address and phone number/account number)</td></tr></tbody></table><h4>API Group</h4><p>Medium</p>
+	 * Creates a bot extension. Please note: 
+	 * Bot extension is always created in Enabled status, no welcome email is sent.
+	 * 
+	 * Permission: EditAccounts
+	 * API Group: Medium
 	 */
 	post(body: BotExtensionCreationRequest): Promise<BotExtensionCreation> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {

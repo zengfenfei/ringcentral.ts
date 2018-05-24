@@ -9,7 +9,13 @@ export default class Contacts extends PathSegment {
 	}
 
 	/**
-	 *  <p style='font-style:italic;'></p><p>Returns contact information on corporate users of federated accounts. Please note: 1. User, DigitalUser, VirtualUser and FaxUser types are returned as User type. 2.ApplicationExtension type is not returned. 3. Only extensions in Enabled, Disabled and NotActivated state are returned.</p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>ReadAccounts</td><td>Viewing user account info (including name, business name, address and phone number/account number)</td></tr></tbody></table><h4>API Group</h4><p>Medium</p>
+	 * Returns contact information on corporate users of federated accounts. Please note: 
+	 * 1. User, DigitalUser, VirtualUser and FaxUser types are returned as User type. 
+	 * 2. ApplicationExtension type is not returned. 
+	 * 3. Only extensions in Enabled, Disabled and NotActivated state are returned.
+	 * 
+	 * Permission: ReadAccounts
+	 * API Group: Medium
 	 */
 	list(query?: ListQuery): Promise<CompanyDirectoryContacts> {
 		return this.getRest().call(this.getEndpoint(false), query, {
@@ -22,7 +28,10 @@ export default class Contacts extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'></p><p>Returns contact information on a particular corporate user of a federated account.</p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>ReadAccounts</td><td>Viewing user account info (including name, business name, address and phone number/account number)</td></tr></tbody></table><h4>API Group</h4><p>Medium</p>
+	 * Returns contact information on a particular corporate user of a federated account.
+	 * 
+	 * Permission: ReadAccounts<
+	 * API Group: Medium
 	 */
 	get(): Promise<ContactInfo> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {

@@ -11,7 +11,10 @@ export default class Users extends PathSegment {
 	}
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.31 (Release 9.2)</p><p>Returns the list of users requested.</p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>ReadAccounts</td><td>Viewing user account info (including name, business name, address and phone number/account number)</td></tr></tbody></table><h4>API Group</h4><p>Medium</p>
+	 * Returns the list of users requested.
+	 * 
+	 * Permission: ReadAccounts
+	 * API Group: Medium
 	 */
 	get(query?: GetQuery): Promise<GetUserListResponse> {
 		return this.getRest().call(this.getEndpoint(true), query, {
@@ -24,7 +27,10 @@ export default class Users extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.31 (Release 9.2)</p><p>Creates a user.</p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>EditAccounts</td><td>Viewing and updating user account info (including name, business name, address and phone number/account number)</td></tr></tbody></table><h4>API Group</h4><p>Medium</p>
+	 * Creates a user.
+	 * 
+	 * Permission: EditAccounts
+	 * API Group: Medium
 	 */
 	post(body: UserCreationRequest): Promise<UserInfo> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {
@@ -37,7 +43,10 @@ export default class Users extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.31 (Release 9.2)</p><p></p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>EditExtensions</td><td>Updating User using SCIM</td></tr></tbody></table><h4>API Group</h4><p>Medium</p>
+	 * Updating User using SCIM.
+	 * 
+	 * Permission: EditExtensions
+	 * API Group: Medium
 	 */
 	put(body: UserUpdateRequest): Promise<UserInfo> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {
@@ -50,7 +59,10 @@ export default class Users extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.31 (Release 9.2)</p><p></p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>EditAccounts</td><td>Deleting User using scim</td></tr></tbody></table><h4>API Group</h4><p>Medium</p>
+	 * Deleting User using SCIM.
+	 * 
+	 * Permission: EditAccounts
+	 * API Group: Medium
 	 */
 	delete(): Promise<void> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {

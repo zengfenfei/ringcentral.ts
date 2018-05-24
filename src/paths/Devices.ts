@@ -8,7 +8,10 @@ export default class Devices extends PathSegment {
 	}
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.32 (Release 9.3)</p><p>Returns the list of paging devices assigned to this group.</p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>ReadAccounts</td><td>Viewing user account info (including name, business name, address and phone number/account number)</td></tr></tbody></table><h4>Usage Plan Group</h4><p>Light</p>
+	 * Returns the list of paging devices assigned to this group.
+	 * 
+	 * Permission: ReadAccounts
+	 * Usage Plan Group: Light
 	 */
 	list(query?: ListQuery): Promise<PagingOnlyGroupDevices> {
 		return this.getRest().call(this.getEndpoint(false), query, {

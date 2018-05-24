@@ -9,7 +9,10 @@ export default class Contact extends PathSegment {
 	}
 
 	/**
-	 *  <p style='font-style:italic;'></p><p></p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>ReadContacts</td><td>Viewing user personal contacts</td></tr></tbody></table><h4>Usage Plan Group</h4><p>Heavy</p>
+	 * List of contact records
+	 * 
+	 * Permission: ReadContacts
+	 * Usage Plan Group: Heavy
 	 */
 	list(query?: ListQuery): Promise<ContactList> {
 		return this.getRest().call(this.getEndpoint(false), query, {
@@ -22,7 +25,10 @@ export default class Contact extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'></p><p></p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>Contacts</td><td>Creating, viewing, editing and deleting user personal contacts</td></tr><tr><td class='code'>ReadContacts</td><td>Viewing user personal contacts</td></tr></tbody></table><h4>Usage Plan Group</h4><p>Heavy</p>
+	 * Adds a new contact
+	 * 
+	 * Permission: Contacts, ReadContacts
+	 * Usage Plan Group: Heavy
 	 */
 	post(body: PersonalContactResource): Promise<PersonalContactResource> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {
@@ -35,7 +41,10 @@ export default class Contact extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'></p><p></p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>ReadContacts</td><td>Viewing user personal contacts</td></tr></tbody></table><h4>Usage Plan Group</h4><p>Heavy</p>
+	 * Get specific contact information by contact id
+	 * 
+	 * Permission: ReadContacts
+	 * Usage Plan Group: Heavy
 	 */
 	get(): Promise<PersonalContactResource> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {
@@ -48,7 +57,10 @@ export default class Contact extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'></p><p></p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>Contacts</td><td>Creating, viewing, editing and deleting user personal contacts</td></tr><tr><td class='code'>ReadContacts</td><td>Viewing user personal contacts</td></tr></tbody></table><h4>Usage Plan Group</h4><p>Heavy</p>
+	 * Update a contact record by contact id
+	 * 
+	 * Permission: Contacts, ReadContacts
+	 * Usage Plan Group: Heavy
 	 */
 	put(body: PersonalContactResource): Promise<PersonalContactResource> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {
@@ -61,7 +73,10 @@ export default class Contact extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'></p><p></p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>Contacts</td><td>Creating, viewing, editing and deleting user personal contacts</td></tr><tr><td class='code'>ReadContacts</td><td>Viewing user personal contacts</td></tr></tbody></table><h4>Usage Plan Group</h4><p>Heavy</p>
+	 * Delete a contact record by contact id
+	 * 
+	 * Permission: Contacts, ReadContacts
+	 * Usage Plan Group: Heavy
 	 */
 	delete(): Promise<void> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {
@@ -85,12 +100,14 @@ export interface ListQuery {
 	sortBy?: ('FirstName' | 'LastName' | 'Company')[];
 
 	/**
-	 * Indicates the page number to retrieve. Only positive number values are allowed. Default value is '1'
+	 * Indicates the page number to retrieve. Only positive number values are allowed. 
+	 * Default value is '1'
 	 */
 	page?: number;
 
 	/**
-	 * Indicates the page size (number of items). If not specified, the value is '100' by default
+	 * Indicates the page size (number of items). 
+	 * If not specified, the value is '100' by default
 	 */
 	perPage?: number;
 

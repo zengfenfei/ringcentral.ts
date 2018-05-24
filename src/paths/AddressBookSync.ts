@@ -8,7 +8,8 @@ export default class AddressBookSync extends PathSegment {
 	}
 
 	/**
-	 *  <p style='font-style:italic;'></p><p></p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>ReadContacts</td><td>Viewing user personal contacts</td></tr></tbody></table><h4>Usage Plan Group</h4><p>Heavy</p>
+	 * Permission: ReadContacts
+	 * Usage Plan Group: Heavy
 	 */
 	list(query?: ListQuery): Promise<IAddressBookSync> {
 		return this.getRest().call(this.getEndpoint(false), query, {
@@ -34,7 +35,12 @@ export interface ListQuery {
 	syncToken?: string;
 
 	/**
-	 * Number of records per page to be returned. The max number of records is 250, which is also the default. For FSync ??? if the number of records exceeds the parameter value (either specified or default), all of the pages can be retrieved in several requests. For ISync ??? if the number of records exceeds the page size, the number of incoming changes to this number is limited
+	 * Number of records per page to be returned. 
+	 * The max number of records is 250, which is also the default. 
+	 * For FSync ??? if the number of records exceeds the parameter value (either specified or default), 
+	 * all of the pages can be retrieved in several requests. 
+	 * For ISync ??? if the number of records exceeds the page size, 
+	 * the number of incoming changes to this number is limited
 	 */
 	perPage?: number;
 

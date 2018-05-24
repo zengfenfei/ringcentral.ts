@@ -4,7 +4,8 @@ import ExtensionInfoProvisionPhoneNumbers from './ExtensionInfoProvisionPhoneNum
 interface ProvisionPhoneNumberRequest {
 
 	/**
-	 * Information on extension which the phone number is added to, only for provisioning extension-level numbers
+	 * Information on extension which the phone number is added to, 
+	 * only for provisioning extension-level numbers
 	 */
 	extensionId?: ExtensionInfoProvisionPhoneNumbers;
 
@@ -14,12 +15,15 @@ interface ProvisionPhoneNumberRequest {
 	phoneNumber?: string;
 
 	/**
-	 * Internal identifier of phone number reservation; encoded data including reservation type (by brand, by account, by session), particular brand/account/session data, and reservation date and time
+	 * Internal identifier of phone number reservation; 
+	 * encoded data including reservation type (by brand, by account, by session), 
+	 * particular brand/account/session data, and reservation date and time
 	 */
 	reservationId?: string;
 
 	/**
-	 * Custom user name of a phone number, if any. Supported for numbers assigned to Auto-Receptionist, with usage type 'CompanyNumber
+	 * Custom user name of a phone number, if any. 
+	 * Supported for numbers assigned to Auto-Receptionist, with usage type 'CompanyNumber
 	 */
 	label?: string;
 
@@ -34,7 +38,8 @@ interface ProvisionPhoneNumberRequest {
 	type?: 'VoiceFax' | 'VoiceOnly' | 'FaxOnly';
 
 	/**
-	 * Vanity pattern that was used to find this number. It should be passed as if it was returned from the Number Lookup call
+	 * Vanity pattern that was used to find this number. 
+	 * It should be passed as if it was returned from the Number Lookup call
 	 */
 	vanityPattern?: string;
 }

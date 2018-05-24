@@ -11,7 +11,10 @@ export default class Device extends PathSegment {
 	}
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.12 (Release 6.4)</p><p>Returns all the devices for a particular extension.</p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>ReadAccounts</td><td>Viewing user account info (including name, business name, address and phone number/account number)</td></tr></tbody></table><h4>Usage Plan Group</h4><p>Light</p>
+	 * Returns all the devices for a particular extension.
+	 * 
+	 * Permission: ReadAccounts
+	 * Usage Plan Group: Light
 	 */
 	list(): Promise<GetAccountDevicesResponse> {
 		return this.getRest().call(this.getEndpoint(false), undefined, {
@@ -24,7 +27,10 @@ export default class Device extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.9 (Release 6.1)</p><p>Returns account device(s) by their ID(s).</p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>ReadAccounts</td><td>Viewing user account info (including name, business name, address and phone number/account number)</td></tr></tbody></table><h4>Usage Plan Group</h4><p>Light</p>
+	 * Returns account device(s) by their ID(s).
+	 * 
+	 * Permission: ReadAccounts
+	 * Usage Plan Group: Light
 	 */
 	get(): Promise<GetDeviceInfoResponse> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {
@@ -35,7 +41,12 @@ export default class Device extends PathSegment {
 		});
 	}
 
-
+	/**
+	 * Updates a device's E911 address.
+	 * 
+	 * Permission: EditAccounts
+	 * Usage Plan Group: 
+	 */
 	put(body: AccountDeviceUpdate): Promise<DeviceResource> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {
 			body: body,

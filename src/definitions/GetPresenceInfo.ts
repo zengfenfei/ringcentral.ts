@@ -15,7 +15,19 @@ interface GetPresenceInfo {
 	allowSeeMyPresence?: boolean;
 
 	/**
-	 * Extended DnD (Do not Disturb) status. Cannot be set for Department/Announcement/Voicemail (Take Messages Only)/Fax User/Shared Lines Group/Paging Only Group/IVR Menu/Application Extension/Park Location extensions. The 'DoNotAcceptDepartmentCalls' and 'TakeDepartmentCallsOnly' values are applicable only for extensions - members of a Department; if these values are set for department outsiders, the 400 Bad Request error code is returned. The 'TakeDepartmentCallsOnly' status can be set through the old RingCentral user interface and is available for some migrated accounts only.
+	 * Extended DnD (Do not Disturb) status. Cannot be set for 
+	 * 1. Department
+	 * 2. Announcement
+	 * 3. Voicemail (Take Messages Only)
+	 * 4. Fax User
+	 * 5. Shared Lines Group
+	 * 6. Paging Only Group
+	 * 7. IVR Menu
+	 * 8. Application Extension
+	 * 9. Park Location extensions. 
+	 * The 'DoNotAcceptDepartmentCalls' and 'TakeDepartmentCallsOnly' values are applicable only for extensions - members of a Department; 
+	 * if these values are set for department outsiders, the 400 Bad Request error code is returned. 
+	 * The 'TakeDepartmentCallsOnly' status can be set through the old RingCentral user interface and is available for some migrated accounts only.
 	 */
 	dndStatus?: 'TakeAllCalls' | 'DoNotAcceptAnyCalls' | 'DoNotAcceptDepartmentCalls' | 'TakeDepartmentCallsOnly';
 

@@ -9,7 +9,9 @@ export default class State extends PathSegment {
 	}
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.10 (Release 6.2)</p><p>Returns all the states for a certain country.</p><h4>Usage Plan Group</h4><p>Light</p>
+	 * Returns all the states for a certain country.
+	 * 
+	 * Usage Plan Group: Light
 	 */
 	list(query?: ListQuery): Promise<GetStateListResponse> {
 		return this.getRest().call(this.getEndpoint(false), query, {
@@ -22,7 +24,9 @@ export default class State extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.10 (Release 6.2)</p><p>Returns the information on the required state.</p><h4>Usage Plan Group</h4><p>Light</p>
+	 * Returns the information on the required state.
+	 * 
+	 * Usage Plan Group: Light
 	 */
 	get(): Promise<GetStateInfoResponse> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {

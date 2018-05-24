@@ -41,7 +41,8 @@ interface UpdateAnsweringRuleRequest {
 	callHandlingAction?: 'ForwardCalls' | 'UnconditionalForwarding' | 'AgentQueue' | 'TransferToExtension' | 'TakeMessagesOnly' | 'PlayAnnouncementOnly';
 
 	/**
-	 * Forwarding parameters. Returned if 'ForwardCalls' is specified in 'callHandlingAction'. These settings determine the forwarding numbers to which the call will be forwarded
+	 * Forwarding parameters. Returned if 'ForwardCalls' is specified in 'callHandlingAction'. 
+	 * These settings determine the forwarding numbers to which the call will be forwarded
 	 */
 	forwarding?: ForwardingInfo;
 
@@ -51,7 +52,8 @@ interface UpdateAnsweringRuleRequest {
 	unconditionalForwarding?: UnconditionalForwardingInfo;
 
 	/**
-	 * Queue settings applied for department (call queue) extension type, with the 'AgentQueue' value specified as a call handling action
+	 * Queue settings applied for department (call queue) extension type, 
+	 * with the 'AgentQueue' value specified as a call handling action
 	 */
 	queue?: QueueInfo;
 
@@ -61,7 +63,8 @@ interface UpdateAnsweringRuleRequest {
 	voicemail?: VoicemailInfo;
 
 	/**
-	 * Greetings applied for an answering rule; only predefined greetings can be applied, see Dictionary Greeting List
+	 * Greetings applied for an answering rule; 
+	 * only predefined greetings can be applied, see Dictionary Greeting List
 	 */
 	greetings?: GreetingInfo[];
 }

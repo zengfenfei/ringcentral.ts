@@ -4,7 +4,8 @@ import DeviceModelResource from './DeviceModelResource';
 interface DeviceModelExtResource {
 
 	/**
-	 * Device identification number (stock keeping unit) in the format TP-ID [-AT-AC], where TP is device type (HP for RC HardPhone, DV for all other devices including softphone); ID - device model ID; AT -addon type ID; AC - addon count (if any). For example 'HP-56-2-2'
+	 * Device identification number (stock keeping unit) in the format TP-ID [-AT-AC], where TP is device type (HP for RC HardPhone, DV for all other devices including softphone); 
+	 * ID - device model ID; AT -addon type ID; AC - addon count (if any). For example 'HP-56-2-2'
 	 */
 	sku?: string;
 

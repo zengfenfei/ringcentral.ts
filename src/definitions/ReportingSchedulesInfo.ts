@@ -25,7 +25,9 @@ interface ReportingSchedulesInfo {
 	attachments?: ReportingAttachmentInfo[];
 
 	/**
-	 * List of pages to include to the report. If empty, all pages are included. Otherwise, only specified pages are included. API doesn't check validity of page names. Client application is responsible to do that
+	 * List of pages to include to the report. If empty, all pages are included. 
+	 * Otherwise, only specified pages are included. 
+	 * API doesn't check validity of page names. Client application is responsible to do that
 	 */
 	pages?: string[];
 

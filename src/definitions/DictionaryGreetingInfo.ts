@@ -20,7 +20,12 @@ interface DictionaryGreetingInfo {
 	name?: string;
 
 	/**
-	 * Usage type of a greeting, specifying if the greeting is applied for user extension or department extension = ['UserExtensionAnsweringRule', 'ExtensionAnsweringRule', 'DepartmentExtensionAnsweringRule', 'CompanyAnsweringRule', 'CompanyAfterHoursAnsweringRule']
+	 * Usage type of a greeting, specifying if the greeting is applied for user extension or department extension = [
+	 * 'UserExtensionAnsweringRule', 
+	 * 'ExtensionAnsweringRule', 
+	 * 'DepartmentExtensionAnsweringRule', 
+	 * 'CompanyAnsweringRule', 
+	 * 'CompanyAfterHoursAnsweringRule']
 	 */
 	usageType?: 'UserExtensionAnsweringRule' | 'ExtensionAnsweringRule' | 'DepartmentExtensionAnsweringRule' | 'CompanyAnsweringRule' | 'CompanyAfterHoursAnsweringRule';
 
@@ -35,12 +40,22 @@ interface DictionaryGreetingInfo {
 	contentUri?: string;
 
 	/**
-	 * Type of a greeting, specifying the case when the greeting is played. See Greeting Types = ['Introductory', 'Announcement', 'ConnectingMessage', 'ConnectingAudio', 'Voicemail', 'Unavailable', 'InterruptPrompt', 'HoldMusic', 'Company']
+	 * Type of a greeting, specifying the case when the greeting is played. See Greeting Types = [
+	 * 'Introductory', 
+	 * 'Announcement', 
+	 * 'ConnectingMessage', 
+	 * 'ConnectingAudio', 
+	 * 'Voicemail', 
+	 * 'Unavailable', 
+	 * 'InterruptPrompt', 
+	 * 'HoldMusic', 
+	 * 'Company']
 	 */
 	type?: 'Introductory' | 'Announcement' | 'ConnectingMessage' | 'ConnectingAudio' | 'Voicemail' | 'Unavailable' | 'InterruptPrompt' | 'HoldMusic' | 'Company';
 
 	/**
-	 * Category of a greeting, specifying data form. The category value 'None' specifies that greetings of a certain type ('Introductory', 'ConnectingAudio', etc.) are switched off for an extension = ['Music', 'Message', 'Ring Tones', 'None']
+	 * Category of a greeting, specifying data form. 
+	 * The category value 'None' specifies that greetings of a certain type ('Introductory', 'ConnectingAudio', etc.) are switched off for an extension = ['Music', 'Message', 'Ring Tones', 'None']
 	 */
 	category?: 'Music' | 'Message' | 'Ring Tones' | 'None';
 

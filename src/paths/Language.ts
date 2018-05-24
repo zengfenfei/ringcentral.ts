@@ -9,7 +9,9 @@ export default class Language extends PathSegment {
 	}
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.14 (Release 6.6)</p><p>Returns the information about supported languages.</p><h4>Usage Plan Group</h4><p>Light</p>
+	 * Returns the information about supported languages.
+	 * 
+	 * Usage Plan Group: Light
 	 */
 	list(): Promise<LanguageList> {
 		return this.getRest().call(this.getEndpoint(false), undefined, {
@@ -22,7 +24,9 @@ export default class Language extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.14 (Release 6.6)</p><p>Returns language by its respective ID.</p><h4>Usage Plan Group</h4><p>Light</p>
+	 * Returns language by its respective ID.
+	 * 
+	 * Usage Plan Group: Light
 	 */
 	get(): Promise<LanguageInfo> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {

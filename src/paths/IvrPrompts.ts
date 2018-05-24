@@ -16,7 +16,10 @@ export default class IvrPrompts extends PathSegment {
 	}
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.32 (Release 9.3)</p><p>Returns a list of IVR prompts.</p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>ReadAccounts</td><td>Viewing user account info (including name, business name, address and phone number/account number)</td></tr></tbody></table><h4>API Group</h4><p>Medium</p>
+	 * Returns a list of IVR prompts.
+	 * 
+	 * Permission: ReadAccounts
+	 * API Group: Medium
 	 */
 	list(): Promise<IIvrPrompts> {
 		return this.getRest().call(this.getEndpoint(false), undefined, {
@@ -29,7 +32,10 @@ export default class IvrPrompts extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.32 (Release 9.3)</p><p>Returns an IVR prompt by ID</p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>ReadAccounts</td><td>Viewing user account info (including name, business name, address and phone number/account number)</td></tr></tbody></table><h4>API Group</h4><p>Medium</p>
+	 * Returns an IVR prompt by ID
+	 * 
+	 * Permission: ReadAccounts
+	 * API Group: Medium
 	 */
 	get(): Promise<PromptInfo> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {
@@ -42,7 +48,10 @@ export default class IvrPrompts extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.32 (Release 9.3)</p><p>Deletes an IVR prompt by ID</p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>EditAccounts</td><td>Viewing user account info (including name, business name, address and phone number/account number)</td></tr></tbody></table><h4>API Group</h4><p>Heavy</p>
+	 * Deletes an IVR prompt by ID
+	 * 
+	 * Permission: EditAccounts
+	 * API Group: Heavy
 	 */
 	delete(): Promise<void> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {

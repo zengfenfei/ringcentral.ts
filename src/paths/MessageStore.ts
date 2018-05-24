@@ -17,7 +17,10 @@ export default class MessageStore extends PathSegment {
 	}
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.2</p><p>Returns the list of messages from an extension mailbox.</p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>ReadMessages</td><td>Viewing user messages</td></tr></tbody></table><h4>Usage Plan Group</h4><p>Light</p>
+	 * Returns the list of messages from an extension mailbox.
+	 * 
+	 * Permission: ReadMessages
+	 * Usage Plan Group: Light
 	 */
 	list(query?: ListQuery): Promise<GetMessageList> {
 		return this.getRest().call(this.getEndpoint(false), query, {
@@ -38,7 +41,12 @@ export default class MessageStore extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.2</p><p>Returns individual message record(s) by the given message ID(s). The length of inbound messages is unlimited. Batch request is supported, see Batch Requests for details.</p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>ReadMessages</td><td>Viewing user messages</td></tr></tbody></table><h4>Usage Plan Group</h4><p>Light</p>
+	 * Returns individual message record(s) by the given message ID(s). 
+	 * The length of inbound messages is unlimited.
+	 * Batch request is supported, see Batch Requests for details.
+	 * 
+	 * Permission: ReadMessages
+	 * Usage Plan Group: Light
 	 */
 	get(): Promise<GetMessageInfoResponse> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {
@@ -51,7 +59,12 @@ export default class MessageStore extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.2</p><p>Updates message(s) by ID(s). Batch request is supported, see Batch Requests for details. Currently, only the message read status updating is supported.</p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>EditMessages</td><td>Viewing and updating user messages</td></tr><tr><td class='code'>ReadMessages</td><td>Viewing user messages</td></tr></tbody></table><h4>Usage Plan Group</h4><p>Medium</p>
+	 * Updates message(s) by ID(s). Batch request is supported, 
+	 * see Batch Requests for details. Currently, 
+	 * only the message read status updating is supported.
+	 * 
+	 * Permissio: EditMessages, ReadMessage
+	 * Usage Plan Group: Medium
 	 */
 	put(body: UpdateMessageRequest): Promise<GetMessageInfoResponse> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {

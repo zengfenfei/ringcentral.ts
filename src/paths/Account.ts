@@ -75,7 +75,8 @@ export default class Account extends PathSegment {
 	}
 
 /**
-	 * Internal identifier of an answering rule. The value can be standard digital ID or specific ID - either business-hours-rule or after-hours-rule
+	 * Internal identifier of an answering rule. 
+	 * The value can be standard digital ID or specific ID - either business-hours-rule or after-hours-rule
 	 */	answeringRule(id?: string) {
 		return new AnsweringRule(this, id);
 	}
@@ -125,7 +126,10 @@ export default class Account extends PathSegment {
 	}
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.0</p><p>Returns basic information about a particular RingCentral customer account.</p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>ReadAccounts</td><td>Viewing user account info (including name, business name, address and phone number/account number)</td></tr></tbody></table><h4>Usage Plan Group</h4><p>Light</p>
+	 * Returns basic information about a particular RingCentral customer account
+	 * 
+	 * Permission: ReadAccounts
+	 * Usage Plan Group
 	 */
 	get(): Promise<GetAccountInfoResponse> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {

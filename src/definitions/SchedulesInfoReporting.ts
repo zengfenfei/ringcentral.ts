@@ -15,17 +15,22 @@ interface SchedulesInfoReporting {
 	recurrence?: RecurrenceInfoReporting[];
 
 	/**
-	 * Type of report. Detailed reports include tables with data. Simple reports only include charts
+	 * Type of report. Detailed reports include tables with data. 
+	 * Simple reports only include charts
 	 */
 	viewType?: 'Detailed' | 'Simple';
 
 	/**
-	 * Set of optional attachments. Basically, every report email is in HTML format. Optionally, it can contain PDF or CSV files
+	 * Set of optional attachments. Basically, every report email is in HTML format. 
+	 * Optionally, it can contain PDF or CSV files
 	 */
 	attachments?: AttachmentInfoReporting[];
 
 	/**
-	 * List of pages to include to the report. If empty, all pages are included. Otherwise, only specified pages are included. API doesn't check validity of page names. Client application is responsible to do that
+	 * List of pages to include to the report. 
+	 * If empty, all pages are included. Otherwise, only specified pages are included. 
+	 * API doesn't check validity of page names. 
+	 * Client application is responsible to do that
 	 */
 	pages?: string[];
 

@@ -9,7 +9,9 @@ export default class Parse extends PathSegment {
 	}
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.13 (Release 6.5)</p><p>Returns one or more parsed and/or formatted phone numbers that are passed as a string.</p><h4>Usage Plan Group</h4><p>Light</p>
+	 * Returns one or more parsed and/or formatted phone numbers that are passed as a string.
+	 * 
+	 * Usage Plan Group: Light
 	 */
 	post(body: ParsePhoneNumberRequest, query?: PostQuery): Promise<ParsePhoneNumberResponse> {
 		return this.getRest().call(this.getEndpoint(true), query, {
@@ -25,12 +27,15 @@ export default class Parse extends PathSegment {
 export interface PostQuery {
 
 	/**
-	 * Internal identifier of a home country. The default value is ISO code (ISO 3166) of the user's home country or brand country, if the user is undefined
+	 * Internal identifier of a home country. 
+	 * The default value is ISO code (ISO 3166) of the user's home country or brand country, 
+	 * if the user is undefined
 	 */
 	homeCountry?: string;
 
 	/**
-	 * The default value is 'False'. If 'True', the numbers that are closer to the home country are given higher priority
+	 * The default value is 'False'. If 'True', 
+	 * the numbers that are closer to the home country are given higher priority
 	 */
 	nationalAsPriority?: boolean;
 }

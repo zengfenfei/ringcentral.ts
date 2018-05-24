@@ -11,7 +11,10 @@ export default class AnsweringRule extends PathSegment {
 	}
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.15 (Release 7.0)</p><p>Returns the extension answering rules.</p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>ReadAccounts</td><td>Viewing user account info (including name, business name, address and phone number/account number)</td></tr></tbody></table><h4>Usage Plan Group</h4><p>Light</p>
+	 * Returns the extension's answering rules.
+	 * 
+	 * Permission: ReadAccounts
+	 * Usage Plan Group: Light
 	 */
 	get(query?: GetQuery): Promise<void> {
 		return this.getRest().call(this.getEndpoint(true), query, {
@@ -22,7 +25,10 @@ export default class AnsweringRule extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.24 (Release 8.0)</p><p>Creates a custom answering rule for a particular caller ID.</p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>EditExtensions</td><td>Viewing and updating my extension info (includes extension name, number, email and phone number)</td></tr></tbody></table><h4>Usage Plan Group</h4><p>Medium</p>
+	 * Creates a custom answering rule.
+	 * 
+	 * Permission: EditExtensions
+	 * Usage Plan Group: Medium
 	 */
 	post(body: CreateAnsweringRuleRequest): Promise<AnsweringRuleInfo> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {
@@ -35,7 +41,10 @@ export default class AnsweringRule extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.24 (Release 8.0)</p><p>Updates a custom answering rule for a particular caller ID.</p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>EditExtensions</td><td>Viewing and updating my extension info (includes extension name, number, email and phone number)</td></tr></tbody></table><h4>Usage Plan Group</h4><p>Medium</p>
+	 * Updates a custom answering rule by answering rule ID.
+	 * 
+	 * Permission: EditExtensions
+	 * Usage Plan Group: Medium
 	 */
 	put(body: UpdateAnsweringRuleRequest): Promise<AnsweringRuleInfo> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {
@@ -46,7 +55,12 @@ export default class AnsweringRule extends PathSegment {
 		});
 	}
 
-
+	/**
+	 * Deletes a custom answering rule by answering rule ID.
+	 * 
+	 * Permission: EditExtensions
+	 * Usage Plan Group: Medium
+	 */
 	delete(): Promise<void> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {
 			body: undefined,
@@ -56,7 +70,10 @@ export default class AnsweringRule extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.31 (Release 9.2)</p><p>Returns a list of company answering rules.</p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>ReadAccounts</td><td>Viewing user account info (including name, business name, address and phone number/account number)</td></tr></tbody></table><h4>API Group</h4><p>Medium</p>
+	 * Returns a list of company answering rules.
+	 * 
+	 * Permission: ReadAccounts
+	 * API Group: Medium
 	 */
 	list(): Promise<CompanyAnsweringRuleList> {
 		return this.getRest().call(this.getEndpoint(false), undefined, {

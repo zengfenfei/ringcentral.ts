@@ -19,7 +19,8 @@ interface ForwardingInfo {
 	softPhonesRingCount?: number;
 
 	/**
-	 * Specifies the order in which forwarding numbers ring. 'Sequentially' means that forwarding numbers are ringing one at a time, in order of priority. 'Simultaneously' means that forwarding numbers are ring all at the same time
+	 * Specifies the order in which forwarding numbers ring. 'Sequentially' means that forwarding numbers are ringing one at a time, in order of priority. 
+	 * 'Simultaneously' means that forwarding numbers are ring all at the same time.
 	 */
 	ringingMode?: 'Sequentially' | 'Simultaneously';
 

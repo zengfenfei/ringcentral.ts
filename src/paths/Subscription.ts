@@ -26,7 +26,9 @@ export default class Subscription extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.6 (Release 5.15)</p><p>Creates a new subscription.</p><h4>Usage Plan Group</h4><p>Medium</p>
+	 * Creates a new subscription.
+	 * 
+	 * Usage Plan Group: Medium
 	 */
 	post(body: CreateSubscriptionRequest): Promise<SubscriptionInfo> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {
@@ -39,7 +41,9 @@ export default class Subscription extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.6 (Release 5.15)</p><p>Returns the requested subscription.</p><h4>Usage Plan Group</h4><p>Light</p>
+	 * Returns the requested subscription.
+	 * 
+	 * Usage Plan Group: Light
 	 */
 	get(): Promise<SubscriptionInfo> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {
@@ -52,7 +56,11 @@ export default class Subscription extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.6 (Release 5.15)</p><p>Renews the existent subscription if the request body is empty. If event filters are specified, calling this method modifies the event filters for the existing subscription. The client application can extend or narrow the events for which it receives notifications in the frame of one subscription.</p><h4>Usage Plan Group</h4><p>Medium</p>
+	 * Renews the existent subscription if the request body is empty.
+	 * If event filters are specified, calling this method modifies the event filters for the existing subscription. 
+	 * The client application can extend or narrow the events for which it receives notifications in the frame of one subscription.
+	 * 
+	 * Usage Plan Group: Medium
 	 */
 	put(body: ModifySubscriptionRequest, query?: PutQuery): Promise<SubscriptionInfo> {
 		return this.getRest().call(this.getEndpoint(true), query, {
@@ -65,7 +73,9 @@ export default class Subscription extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'></p><p>Cancels the existent subscription.</p><h4>Usage Plan Group</h4><p>Medium</p>
+	 * Cancels the existent subscription.
+	 * 
+	 * Usage Plan Group: Medium
 	 */
 	delete(): Promise<void> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {

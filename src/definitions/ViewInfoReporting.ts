@@ -15,7 +15,9 @@ interface ViewInfoReporting {
 	pages?: PagesInfoReporting[];
 
 	/**
-	 * List of schedules, the max amount is 5. Each 'View' may have several schedules for reporting. For example, customer may want to get daily and weekly reports with the same set of settings
+	 * List of schedules, the max amount is 5. 
+	 * Each 'View' may have several schedules for reporting.
+	 * For example, customer may want to get daily and weekly reports with the same set of settings
 	 */
 	schedules?: SchedulesInfoReporting[];
 }

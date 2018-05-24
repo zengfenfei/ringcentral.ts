@@ -18,12 +18,15 @@ export default class FaxCoverPage extends PathSegment {
 export interface GetQuery {
 
 	/**
-	 * Indicates the page number to retrieve. Only positive number values are allowed. Default value is '1'
+	 * Indicates the page number to retrieve. 
+	 * Only positive number values are allowed. 
+	 * Default value is '1'
 	 */
 	page?: number;
 
 	/**
-	 * Indicates the page size (number of items). If not specified, the value is '100' by default
+	 * Indicates the page size (number of items). 
+	 * If not specified, the value is '100' by default
 	 */
 	perPage?: number;
 }

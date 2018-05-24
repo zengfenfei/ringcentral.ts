@@ -9,7 +9,10 @@ export default class CallLog extends PathSegment {
 	}
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.3 (Release 5.11)</p><p>Returns call log records filtered by the specified parameters.</p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>ReadCallLog</td><td>Viewing user call logs</td></tr></tbody></table><h4>Usage Plan Group</h4><p>Heavy</p>
+	 * Returns call log records filtered by the specified parameters.
+	 * 
+	 * Permission: ReadCallLog
+	 * Usage Plan Group: Heavy
 	 */
 	list(query?: ListQuery): Promise<ExtensionCallLogResponse> {
 		return this.getRest().call(this.getEndpoint(false), query, {
@@ -22,7 +25,10 @@ export default class CallLog extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'></p><p></p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>EditCallLog</td><td>Viewing and updating user call logs</td></tr><tr><td class='code'>ReadCallLog</td><td>Viewing user call logs</td></tr></tbody></table><h4>Usage Plan Group</h4><p>Heavy</p>
+	 * Remove call log record by id
+	 * 
+	 * Permission: EditCallLog
+	 * Usage Plan Group: Heavy
 	 */
 	delete(query?: DeleteQuery): Promise<void> {
 		return this.getRest().call(this.getEndpoint(true), query, {
@@ -31,7 +37,12 @@ export default class CallLog extends PathSegment {
 		}).then(res => {});
 	}
 
-
+	/**
+	 * Get call record by ID
+	 * 
+	 * Permission: ReadCallLog
+	 * Usage Plan Group: Heavy
+	 */
 	get(query?: GetQuery): Promise<UserCallLogRecord> {
 		return this.getRest().call(this.getEndpoint(true), query, {
 			body: undefined,

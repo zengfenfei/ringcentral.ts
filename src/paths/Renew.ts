@@ -8,7 +8,9 @@ export default class Renew extends PathSegment {
 	}
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.26 (Release 8.12)</p><p>Renews an existent subscription by ID by posting request with an empty body..</p><h4>Usage Plan Group</h4><p>Medium</p>
+	 * Renews an existent subscription by ID by posting request with an empty body.
+	 * 
+	 * Usage Plan Group: Medium
 	 */
 	post(): Promise<SubscriptionInfo> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {

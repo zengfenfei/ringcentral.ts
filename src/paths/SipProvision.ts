@@ -9,7 +9,10 @@ export default class SipProvision extends PathSegment {
 	}
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.16 (Release 7.1)</p><p>Creates SIP registration of a device/application (WebPhone, Mobile, softphone)</p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>VoipCalling</td><td>Registering as VoIP device and making VoIP calls</td></tr></tbody></table><h4>API Group</h4><p>Heavy</p>
+	 * Creates SIP registration of a device/application (WebPhone, Mobile, softphone)
+	 * 
+	 * Permission: VoipCalling
+	 * API Group: Heavy
 	 */
 	post(body: CreateSipRegistrationRequest): Promise<CreateSipRegistrationResponse> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {

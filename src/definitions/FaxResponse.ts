@@ -56,12 +56,16 @@ interface FaxResponse {
 	direction?: 'Inbound' | 'Outbound';
 
 	/**
-	 * Message availability status. Message in 'Deleted' state is still preserved with all its attachments and can be restored. 'Purged' means that all attachments are already deleted and the message itself is about to be physically deleted shortly
+	 * Message availability status. Message in 'Deleted' state is still preserved with all its attachments and can be restored. 
+	 * 'Purged' means that all attachments are already deleted and the message itself is about to be physically deleted shortly
 	 */
 	availability?: 'Alive' | 'Deleted' | 'Purged';
 
 	/**
-	 * Message status. 'Queued' - the message is queued for sending; 'Sent' - a message is successfully sent; 'SendingFailed' - a message sending attempt has failed; 'Received' - a message is received (inbound messages have this status by default)
+	 * Message status. 'Queued' - the message is queued for sending; 
+	 * 'Sent' - a message is successfully sent; 
+	 * 'SendingFailed' - a message sending attempt has failed; 
+	 * 'Received' - a message is received (inbound messages have this status by default)
 	 */
 	messageStatus?: 'Queued' | 'Sent' | 'SendingFailed' | 'Received';
 

@@ -9,7 +9,10 @@ export default class BlockedNumber extends PathSegment {
 	}
 
 	/**
-	 *  <p style='font-style:italic;'></p><p></p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>ReadAccounts</td><td>Viewing user account info (including name, business name, address and phone number/account number)</td></tr></tbody></table><h4>Usage Plan Group</h4><p>Light</p>
+	 * List of phone numbers blocked for an extension by extension id
+	 * 
+	 * Permission: ReadAccounts
+	 * Usage Plan Group: Light
 	 */
 	list(): Promise<BlockedNumbersList> {
 		return this.getRest().call(this.getEndpoint(false), undefined, {
@@ -22,7 +25,10 @@ export default class BlockedNumber extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'></p><p></p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>EditExtensions</td><td>Viewing and updating my extension info (includes extension name, number, email and phone number)</td></tr></tbody></table><h4>Usage Plan Group</h4><p>Medium</p>
+	 * Add a number to the extension's blocked number list
+	 * 
+	 * Permission: EditExtensions
+	 * sage Plan Group: Medium
 	 */
 	post(body: BlockedNumberInfo): Promise<BlockedNumberInfo> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {
@@ -35,7 +41,10 @@ export default class BlockedNumber extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'></p><p></p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>ReadAccounts</td><td>Viewing user account info (including name, business name, address and phone number/account number)</td></tr></tbody></table><h4>Usage Plan Group</h4><p>Light</p>
+	 * Blocked number info by ID
+	 * 
+	 * Permission:ReadAccounts
+	 * Usage Plan Group: Light
 	 */
 	get(): Promise<BlockedNumberInfo> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {
@@ -48,7 +57,10 @@ export default class BlockedNumber extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'></p><p></p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>EditExtensions</td><td>Viewing and updating my extension info (includes extension name, number, email and phone number)</td></tr></tbody></table><h4>Usage Plan Group</h4><p>Medium</p>
+	 * Modify blocked number record by id 
+	 * 
+	 * Permission: EditExtensions
+	 * Usage Plan Group: Medium
 	 */
 	put(body: BlockedNumberInfo): Promise<BlockedNumberInfo> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {
@@ -61,7 +73,10 @@ export default class BlockedNumber extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'></p><p></p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>EditExtensions</td><td>Viewing and updating my extension info (includes extension name, number, email and phone number)</td></tr></tbody></table><h4>Usage Plan Group</h4><p>Medium</p>
+	 * Delete blocked number from extension blocked number list by id
+	 * 
+	 * Permission: EditExtensions
+	 * Usage Plan Group: Medium
 	 */
 	delete(): Promise<void> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {

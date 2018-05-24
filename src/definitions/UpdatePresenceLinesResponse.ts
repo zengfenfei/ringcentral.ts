@@ -11,7 +11,8 @@ interface UpdatePresenceLinesResponse {
 	uri?: string;
 
 	/**
-	 * List of lines (extensions) the presence of which is monitored by the user. The first two lines always indicate the user's extension presence, they cannot be changed
+	 * List of lines (extensions) the presence of which is monitored by the user. 
+	 * The first two lines always indicate the user's extension presence, they cannot be changed
 	 */
 	records?: LineInfo[];
 

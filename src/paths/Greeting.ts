@@ -11,7 +11,12 @@ export default class Greeting extends PathSegment {
 	}
 
 	/**
-	 *  <p style='font-style:italic;'>Since 8.2 (Release 1.0.26)</p><p>Returns a list of predefined standard greetings. Please note: Custom greetings recorded by user are not returned in response to this request. See Get Extension Custom Greetings.</p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>ReadAccounts</td><td>View Greetings</td></tr></tbody></table><h4>Usage Plan Group</h4><p>Light</p>
+	 * Returns a list of predefined standard greetings. 
+	 * Please note: Custom greetings recorded by user are not returned in response to this request. 
+	 * See Get Extension Custom Greetings.
+	 * 
+	 * Permission: ReadAccounts
+	 * Usage Plan Group: Light
 	 */
 	list(query?: ListQuery): Promise<DictionaryGreetingList> {
 		return this.getRest().call(this.getEndpoint(false), query, {
@@ -24,7 +29,10 @@ export default class Greeting extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'>Since 8.2 (Release 1.0.26)</p><p>Returns a standard greeting by ID</p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>ReadAccounts</td><td>View Greetings</td></tr></tbody></table><h4>Usage Plan Group</h4><p>Medium</p>
+	 * Returns a standard greeting by ID
+	 * 
+	 * Permission: ReadAccounts
+	 * Usage Plan Group: Medium
 	 */
 	get(): Promise<DictionaryGreetingInfo> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {
@@ -50,12 +58,14 @@ export default class Greeting extends PathSegment {
 export interface ListQuery {
 
 	/**
-	 * Indicates the page number to retrieve. Only positive number values are allowed. Default value is '1'
+	 * Indicates the page number to retrieve. 
+	 * Only positive number values are allowed. Default value is '1'
 	 */
 	page?: number;
 
 	/**
-	 * Indicates the page size (number of items). If not specified, the value is '100' by default
+	 * Indicates the page size (number of items). 
+	 * If not specified, the value is '100' by default
 	 */
 	perPage?: number;
 

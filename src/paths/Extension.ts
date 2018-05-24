@@ -161,7 +161,10 @@ export default class Extension extends PathSegment {
 	}
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.0</p><p>Returns the list of extensions created for a particular account. All types of extensions are included in this list.</p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>ReadAccounts</td><td>Viewing user account info (including name, business name, address and phone number/account number)</td></tr></tbody></table><h4>API Group</h4><p>Medium</p>
+	 * Returns the list of extensions created for a particular account. All types of extensions are included in this list.
+	 * 
+	 * Permission: ReadAccounts
+	 * API Group: Medium
 	 */
 	list(query?: ListQuery): Promise<GetExtensionListResponse> {
 		return this.getRest().call(this.getEndpoint(false), query, {
@@ -174,7 +177,10 @@ export default class Extension extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.10 (Release 6.2)</p><p>Creates an extension.</p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>EditAccounts</td><td>Viewing and updating user account info (including name, business name, address and phone number/account number)</td></tr></tbody></table><h4>API Group</h4><p>Medium</p>
+	 * Creates an extension.
+	 * 
+	 * Permission: EditAccounts
+	 * API Group: Medium
 	 */
 	post(body: ExtensionCreationRequest): Promise<ExtensionInfo> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {
@@ -187,7 +193,10 @@ export default class Extension extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.0</p><p>Returns basic information about a particular extension of an account.</p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>ReadAccounts</td><td>Viewing user account info (including name, business name, address and phone number/account number)</td></tr></tbody></table><h4>Usage Plan Group</h4><p>Light</p>
+	 * Returns basic information about a particular extension of an account.
+	 * 
+	 * Permission: ReadAccounts
+	 * Usage Plan Group: Light
 	 */
 	get(): Promise<GetExtensionInfoResponse> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {
@@ -200,7 +209,10 @@ export default class Extension extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'></p><p></p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>EditExtensions</td><td>Viewing and updating my extension info (includes extension name, number, email and phone number)</td></tr></tbody></table><h4>Usage Plan Group</h4><p>Medium</p>
+	 * Updates information for a particular extension by id.
+	 * 
+	 * Permission: EditExtensions
+	 * Usage Plan Group: Medium
 	 */
 	put(body: ExtensionUpdateRequest): Promise<GetExtensionInfoResponse> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {
@@ -213,7 +225,10 @@ export default class Extension extends PathSegment {
 
 
 	/**
-	 *  <p style='font-style:italic;'>Since 1.0.10 (Release 6.2)</p><p>Deletes extension(s) by ID(s).</p><h4>Required Permissions</h4><table class='fullwidth'><thead><tr><th>Permission</th><th>Description</th></tr></thead><tbody><tr><td class='code'>EditAccounts</td><td>Viewing and updating user account info (including name, business name, address and phone number/account number)</td></tr></tbody></table><h4>Usage Plan Group</h4><p>Medium</p>
+	 * Deletes extension(s) by ID(s).
+	 * 
+	 * Permission: EditAccounts
+	 * Usage Plan Group: Medium
 	 */
 	delete(): Promise<void> {
 		return this.getRest().call(this.getEndpoint(true), undefined, {
